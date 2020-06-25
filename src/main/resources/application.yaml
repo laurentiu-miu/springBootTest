@@ -1,0 +1,15 @@
+management:
+  health:
+    probes:
+      enabled: true
+  endpoint:
+    health:
+      show-details: always
+      show-components: always
+  endpoints:
+    web:
+      exposure:
+        include: 'info,health,live,ready'
+      base-path: /.well-known
+server:
+  port: 8181
